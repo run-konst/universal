@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universal</title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+<header class="header">
+    <div class="container">
+        <nav class="header__nav">
+            <?php   
+                if( has_custom_logo() ){
+                    the_custom_logo();
+                }
+                else {
+                    echo "Universal";
+                }
+                wp_nav_menu( [
+                    'theme_location'  => 'header_menu',
+                    'container'       => false,
+                    'menu_class'      => 'header__menu', 
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                ] );
+                echo get_search_form();
+            ?>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,45 @@
+.header
+    padding: 15px 0
+    background-color: #262D33
+
+.custom-logo
+    display: block
+
+.header__nav
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+
+.header__menu
+    display: flex
+    flex-wrap: wrap
+
+.menu-item:not(:last-child)
+    margin-right: 30px
+
+.header__menu 
+    a
+        color: white
+        font-weight: 900
+
+.search
+    position: relative
+    &__input
+        width: 263px
+        background-color: #656B70
+        padding: 10px 25px
+        border: none
+        border-radius: 10px
+        color: #BCBFC2
+        &::placeholder
+            color: #939699
+    &__btn
+        position: absolute
+        right: 10px
+        top: 0
+        width: 40px
+        height: 40px
+        border: none
+        background: url('../images/search__btn.svg') no-repeat center center
+
