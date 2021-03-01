@@ -23,8 +23,6 @@
                     'container'       => false,
                     'menu_class'      => 'header__menu', 
                     'echo'            => true,
-                    'fallback_cb'     => 'wp_page_menu',
-                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                 ] );
                 echo get_search_form();
             ?>
