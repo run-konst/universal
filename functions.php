@@ -6,6 +6,9 @@ if ( ! function_exists( 'universal_theme_setup' ) ) :
 
         // Добавление title
 		add_theme_support( 'title-tag' );
+
+        // Добавление миниатюр
+		add_theme_support( 'post-thumbnails', array('post') );
         
         // Добавление логотипа
         add_theme_support(

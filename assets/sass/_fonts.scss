@@ -1,0 +1,32 @@
+/* roboto-slab-700 - latin_cyrillic */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: local(''),
+         url('../fonts/roboto-slab-v13-latin_cyrillic-700.woff2') format('woff2'),
+         url('../fonts/roboto-slab-v13-latin_cyrillic-700.woff') format('woff');
+}
+
+/* roboto-slab-700 - latin_cyrillic */
+@font-face {
+    font-family: 'Lato';
+    font-style: bold;
+    font-weight: 900;
+    font-display: swap;
+    src: local(''),
+         url('../fonts/Lato-Black.woff2') format('woff2'),
+         url('../fonts/Lato-Black.woff') format('woff');
+}
+
+/* roboto-slab-700 - latin_cyrillic */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+         url('../fonts/Lato-Regular.woff2') format('woff2'),
+         url('../fonts/Lato-Regular.woff') format('woff');
+}
