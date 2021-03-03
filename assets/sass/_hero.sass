@@ -14,6 +14,8 @@
 .topic
     position: relative
     overflow: hidden
+    display: flex
+    flex-direction: column
     padding: 55px
     padding-bottom: 100px
     >*
@@ -29,12 +31,12 @@
         background-color: rgba(64, 48, 61, 0.35)
         z-index: 1
     &__thumb
-        position: absolute
-        height: 100%
-        left: 0
+        position: absolute    
         top: 0
-        right: 0
-        bottom: 0
+        left: 0    
+        height: 100%
+        width: 100%
+        object-fit: cover
         z-index: 0
     .post-categories
         a
@@ -46,6 +48,8 @@
             letter-spacing: 0.5px
             color: $blue75
             text-transform: uppercase
+    &__info
+        margin-top: auto
     &__heading
         margin-bottom: 50px
         max-width: 600px
@@ -64,7 +68,7 @@
 .topic-author
     display: flex
     align-items: center
-    margin-bottom: 145px
+    margin-bottom: 20px
     &__avatar
         margin-right: 10px
         width: 45px

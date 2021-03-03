@@ -155,6 +155,13 @@ body {
 .topic {
   position: relative;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 55px;
   padding-bottom: 100px;
 }
@@ -177,11 +184,12 @@ body {
 
 .topic__thumb {
   position: absolute;
-  height: 100%;
-  left: 0;
   top: 0;
-  right: 0;
-  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: 0;
 }
 
@@ -194,6 +202,10 @@ body {
   letter-spacing: 0.5px;
   color: #4592FF;
   text-transform: uppercase;
+}
+
+.topic__info {
+  margin-top: auto;
 }
 
 .topic__heading {
@@ -222,7 +234,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 145px;
+  margin-bottom: 20px;
 }
 
 .topic-author__avatar {
@@ -287,6 +299,61 @@ body {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+}
+
+.articles {
+  margin-bottom: 30px;
+}
+
+.articles__list {
+  padding: 25px 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #30363D;
+  border-radius: 10px;
+}
+
+.articles__item {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  padding: 5px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.articles__item:not(:last-child) {
+  border-right: 1px solid #4B5157;
+}
+
+.articles__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.articles__heading {
+  padding-right: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 900;
+  color: white;
+  margin-right: auto;
+}
+
+.articles__img {
+  width: 65px;
+  height: 65px;
 }
 
 .error-404 {
