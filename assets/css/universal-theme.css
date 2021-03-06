@@ -384,7 +384,6 @@ body {
   -ms-flex-preferred-size: calc( 25% - 30px);
       flex-basis: calc( 25% - 30px);
   overflow: hidden;
-  background-color: #fff;
   border-radius: 10px;
 }
 

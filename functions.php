@@ -61,20 +61,18 @@ if ( function_exists( 'add_image_size' ) ) {
 function universal_theme_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Основной сайдбар', 'sidebar-grid' ),
+			'name'          => esc_html__( 'Основной сайдбар', 'universaltheme' ),
 			'id'            => 'sidebar-grid',
-			'description'   => esc_html__( 'Добавьте виджеты сюда.', 'universal-example' ),
+			'description'   => esc_html__( 'Добавьте виджеты сюда.', 'universaltheme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
 		)
 	);
 	register_sidebar(
 		array(
-			'name'          => 'Недавние статьи',
+			'name'          => esc_html__( 'Недавние статьи', 'universaltheme' ),
 			'id'            => 'sidebar-articles',
-			'description'   => 'Добавьте виджеты сюда.',
+			'description'   => esc_html__( 'Добавьте виджеты сюда.', 'universaltheme' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 		)
@@ -170,7 +168,7 @@ class Downloader_Widget extends WP_Widget {
 	}
 
 	// скрипт виджета
-	function add_my_widget_scripts() {
+	function add_downloader_widget_scripts() {
 		// фильтр чтобы можно было отключить скрипты
 		if( ! apply_filters( 'show_my_widget_script', true, $this->id_base ) )
 			return;
@@ -181,15 +179,8 @@ class Downloader_Widget extends WP_Widget {
 	}
 
 	// стили виджета
-	function add_my_widget_style() {
-		// фильтр чтобы можно было отключить стили
-		if( ! apply_filters( 'show_my_widget_style', true, $this->id_base ) )
+	function add_downloader_widget_style() {
 			return;
-		?>
-		<style type="text/css">
-			.my_widget a{ display:inline; }
-		</style>
-		<?php
 	}
 
 } 
