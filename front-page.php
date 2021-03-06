@@ -225,6 +225,7 @@
                 ?>
                 </ul>
                 <div class="articles-grid__right">
+                    <?php get_sidebar('grid'); ?>
                 </div>
             </div>
         </div>                    

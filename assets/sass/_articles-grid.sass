@@ -11,6 +11,7 @@
         grid-gap: 30px
     &__right
         flex-basis: calc( 25% - 30px )
+        overflow: hidden
         background-color: #fff
         border-radius: 10px
     &__item
@@ -226,3 +227,44 @@
         line-height: 15px
         color: #939699
         margin-top: auto
+    
+/* Sidebar */
+
+.grid-sidebar
+    height: 100%
+    display: flex
+    flex-direction: column
+    
+/* Downloader widget */
+
+.downloader-widget
+    flex-basis: calc( 25% - 30px )
+    margin-bottom: 30px
+    display: flex
+    flex-direction: column
+    border-radius: 10px
+    background: #3BBDC4 url('../images/download-file.svg') no-repeat right 10px top 20px
+    &__heading
+        padding: 25px
+        padding-bottom: 0
+        margin-bottom: 10px
+        +roboto
+        font-size: 16px
+        line-height: 25px
+        color: white
+    &__text
+        color: #C1F4F5
+        padding: 0 25px
+        margin-bottom: 10px
+    &__link
+        margin-top: auto
+        display: flex
+        justify-content: center
+        padding: 12px 0
+        border-top: 1px solid #96E2E3
+    &__link-content
+        padding-left: 30px
+        color: white
+        font-weight: 900
+        background: url('../images/download-icon.svg') no-repeat left center
+
