@@ -233,15 +233,32 @@
     height: 100%
     display: flex
     flex-direction: column
+    .tagcloud
+        flex-basis: 50%
     
+.widget
+    border-radius: 10px
+    background-color: #fff
+    overflow: hidden
+    &:not(:last-child)
+        margin-bottom: 30px
+
+.widgettitle
+    padding: 20px 25px
+    text-transform: uppercase
+    font-size: 14px
+    line-height: 20px
+    font-weight: 900
+    letter-spacing: 0.5px
+    color: $gray100
+    border-bottom: 1px solid #D9DADB
+
 /* Downloader widget */
 
 .downloader-widget
     flex-basis: calc( 25% - 30px )
-    margin-bottom: 30px
     display: flex
     flex-direction: column
-    border-radius: 10px
     background: #3BBDC4 url('../images/download-file.svg') no-repeat right 10px top 20px
     &__heading
         padding: 25px
@@ -267,3 +284,59 @@
         font-weight: 900
         background: url('../images/download-icon.svg') no-repeat left center
 
+/* Tag cloud widget */
+
+.tagcloud
+    padding: 20px
+    padding-bottom: 30px
+    padding-right: 10px
+    display: flex
+    flex-wrap: wrap
+    a
+        padding: 5px 15px
+        margin-right: 10px
+        color: $gray100
+        font-weight: 900
+        border: 1px solid #D9DADB
+        border-radius: 5px
+        &:not(:last-child)
+            margin-bottom: 15px
+            
+
+/* Social widget */
+
+.social-widget
+    flex-basis: calc(25% - 30px)
+    padding: 30px 25px 40px
+    &__heading
+        margin-bottom: 25px
+        +roboto
+        font-size: 20px
+        line-height: 25px
+        color: $gray100
+        text-align: center
+    &__list
+        display: flex
+        flex-wrap: wrap
+    &__item
+        display: flex
+        &:not(:last-child)
+            margin-right: 8px
+    &__link
+        width: 45px
+        height: 45px
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 45px 45px
+        border-radius: 50%
+
+
+    .social-
+        &facebook
+            background-image: url('../images/social/facebook.svg')
+        &instagram
+            background-image: url('../images/social/instagram.svg')
+        &youtube
+            background-image: url('../images/social/youtube.svg')
+        &twitter
+            background-image: url('../images/social/twitter.svg')

@@ -725,11 +725,36 @@ body {
           flex-direction: column;
 }
 
+.grid-sidebar .tagcloud {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.widget {
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.widget:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.widgettitle {
+  padding: 20px 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  color: #262D33;
+  border-bottom: 1px solid #D9DADB;
+}
+
 /* Downloader widget */
 .downloader-widget {
   -ms-flex-preferred-size: calc( 25% - 30px);
       flex-basis: calc( 25% - 30px);
-  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,7 +762,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 10px;
   background: #3BBDC4 url("../images/download-file.svg") no-repeat right 10px top 20px;
 }
 
@@ -775,6 +799,91 @@ body {
   color: white;
   font-weight: 900;
   background: url("../images/download-icon.svg") no-repeat left center;
+}
+
+/* Tag cloud widget */
+.tagcloud {
+  padding: 20px;
+  padding-bottom: 30px;
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tagcloud a {
+  padding: 5px 15px;
+  margin-right: 10px;
+  color: #262D33;
+  font-weight: 900;
+  border: 1px solid #D9DADB;
+  border-radius: 5px;
+}
+
+.tagcloud a:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+/* Social widget */
+.social-widget {
+  -ms-flex-preferred-size: calc(25% - 30px);
+      flex-basis: calc(25% - 30px);
+  padding: 30px 25px 40px;
+}
+
+.social-widget__heading {
+  margin-bottom: 25px;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  color: #262D33;
+  text-align: center;
+}
+
+.social-widget__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.social-widget__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-widget__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.social-widget__link {
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 45px 45px;
+  border-radius: 50%;
+}
+
+.social-widget .social-facebook {
+  background-image: url("../images/social/facebook.svg");
+}
+
+.social-widget .social-instagram {
+  background-image: url("../images/social/instagram.svg");
+}
+
+.social-widget .social-youtube {
+  background-image: url("../images/social/youtube.svg");
+}
+
+.social-widget .social-twitter {
+  background-image: url("../images/social/twitter.svg");
 }
 
 .error-404 {
