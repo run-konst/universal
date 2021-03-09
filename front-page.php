@@ -33,7 +33,7 @@
                             <div class="topic__info">
                                 <?php the_category(); ?>
                                 <h2 class="topic__heading"><?php the_title(); ?></h2>
-                                <a href="<?php the_permalink(); ?>" class="topic__button">Читать далее</a>
+                                <a href="<?php the_permalink(); ?>" class="read-more-button">Читать далее</a>
                             </div>
                         </article>
                         
@@ -128,6 +128,7 @@
                 // задаем нужные нам критерии выборки данных из БД
                 $args = array(
                     'posts_per_page' => 7,
+                    'category__not_in' => '21',
                     'tag' => 'Фриланс, трудоустройство'
                 );
 
@@ -229,6 +230,90 @@
                 </div>
             </div>
         </div>                    
+    </section>
+    
+    <!-- INVESTIGATION -->
+
+    <?php
+        global $post;
+
+        $myposts = get_posts([ 
+            'numberposts' => 1,
+            'category_name' => 'investigation',
+        ]);
+
+        if( $myposts ){
+            foreach( $myposts as $post ){
+                setup_postdata( $post );
+                ?>
+
+                <section class="investigation" style="background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35)), url('<?php the_post_thumbnail_url(); ?>') no-repeat center center">
+                    <div class="container">
+                        <h2 class="investigation__heading"><?php the_title(); ?></h2>
+                        <a href="<?php the_permalink(); ?>" class="read-more-button">Читать статью</a>
+                    </div>
+                </section>
+
+                <?php 
+            }
+        } else {
+            // Постов не найдено
+        }
+
+        wp_reset_postdata(); // Сбрасываем $post
+    ?>
+    
+    <!-- NEWS COLUMN -->
+
+    <section class="news-column">
+        <div class="container">
+            <div class="news-column__container">
+                <ul class="news-column__left">
+                <?php
+                    global $post;
+
+                    $myposts = get_posts([ 
+                        'numberposts' => 6,
+                    ]);
+
+                    if( $myposts ){
+                        foreach( $myposts as $post ){
+                            setup_postdata( $post );
+                            ?>
+
+                            <li class="news-column__item">
+                                <img src="<?php the_post_thumbnail_url('small-thumb'); ?>" alt="<?php the_title(); ?>" class="news-column__img">
+                                <div class="news-column__article">
+                                    <?php the_category(); ?>
+                                    <a href="<?php the_permalink(); ?>" class="news-column__link">
+                                        <h2 class="news-column__heading"><?php the_title(); ?></h2>
+                                    </a>                                    
+                                    <p class="news-column__excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20); ?></p>
+                                    <div class="news-column__info">
+                                        <span class="news-column__date"><?php the_time('j F'); ?></span>
+                                        <span class="news-column__comments"><?php comments_number('0', '1', '%'); ?></span>
+                                        <span class="news-column__likes">42</span>
+                                    </div>
+
+                                </div>
+                            
+                            </li>
+
+                            <?php 
+                        }
+                    } else {
+                        // Постов не найдено
+                    }
+
+                    wp_reset_postdata(); // Сбрасываем $post
+                ?>
+                </ul>
+                <div class="news-column__right">
+                asdasdsadadsa
+                    
+                </div>        
+            </div>
+        </div>
     </section>
 </main>
 

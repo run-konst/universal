@@ -53,7 +53,10 @@ function delete_intermediate_image_sizes( $sizes ){
 // Добавляем миниатюры
 
 if ( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'homepage-thumb', 65, 65, true ); 
+	add_image_size( 'homepage-thumb', 65, 65, true );
+	add_image_size( 'small-thumb', 336, 195, true ); 
+	add_image_size( 'smaller-thumb', 263, 180, true );
+	add_image_size( 'medium-thumb', 1140, 600, true );
 }
 
 // Регистрируем сайдбары
