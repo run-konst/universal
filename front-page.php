@@ -45,7 +45,7 @@
 
                 wp_reset_postdata(); // Сбрасываем $post
             ?>
-                <div class="hero__right recomend">
+                <div class="hero__right recomend">                
                     <h3 class="recomend__heading">Рекомендуем</h3>
                         <ul class="recomend__list">
                         <?php
@@ -61,7 +61,16 @@
                                     ?>
                                     
                                         <li class="recomend__item">
-                                            <?php the_category(); ?>
+                                            <?php 
+                                            foreach( get_the_category() as $category ) {
+                                                printf(
+                                                    '<a href="%s" class="category-link category-%s">%s</a>',
+                                                    esc_url(get_category_link($category)),
+                                                    esc_html($category -> slug),
+                                                    esc_html($category -> name),
+                                                ); 
+                                            }
+                                            ?>                                        
                                             <a href="<?php the_permalink(); ?>" class="recomend__link">
                                                 <h4 class="recomend__text"><?php echo wp_trim_words( get_the_title(), 5); ?></h4>
                                             </a>
@@ -274,6 +283,7 @@
 
                     $myposts = get_posts([ 
                         'numberposts' => 6,
+                        'tag' => 'Фриланс, трудоустройство'
                     ]);
 
                     if( $myposts ){
@@ -284,7 +294,16 @@
                             <li class="news-column__item">
                                 <img src="<?php the_post_thumbnail_url('small-thumb'); ?>" alt="<?php the_title(); ?>" class="news-column__img">
                                 <div class="news-column__article">
-                                    <?php the_category(); ?>
+                                    <?php 
+                                    foreach( get_the_category() as $category ) {
+                                        printf(
+                                            '<a href="%s" class="category-link category-%s">%s</a>',
+                                            esc_url(get_category_link($category)),
+                                            esc_html($category -> slug),
+                                            esc_html($category -> name),
+                                        ); 
+                                    }
+                                    ?>   
                                     <a href="<?php the_permalink(); ?>" class="news-column__link">
                                         <h2 class="news-column__heading"><?php the_title(); ?></h2>
                                     </a>                                    
@@ -294,9 +313,7 @@
                                         <span class="news-column__comments"><?php comments_number('0', '1', '%'); ?></span>
                                         <span class="news-column__likes">42</span>
                                     </div>
-
-                                </div>
-                            
+                                </div>                            
                             </li>
 
                             <?php 
@@ -309,8 +326,7 @@
                 ?>
                 </ul>
                 <div class="news-column__right">
-                asdasdsadadsa
-                    
+                    <?php get_sidebar('articles'); ?>                    
                 </div>        
             </div>
         </div>

@@ -4,13 +4,13 @@
         display: flex
     &__left
         padding: 0 25px
-        flex-basis: 75%
+        flex-basis: 74%
         margin-right: 30px
         overflow: hidden
         border-radius: 10px
         background-color: #fff
     &__right
-        flex-basis: calc( 25% - 30px )
+        flex-basis: calc( 26% - 30px )
         overflow: hidden
         border-radius: 10px
     &__item
@@ -24,19 +24,22 @@
         object-fit: cover
         margin-right: 25px
     &__article
+        position: relative
         display: flex
         flex-direction: column
-    .post-categories
+        &::after
+            content: ''
+            width: 20px
+            height: 20px
+            position: absolute
+            right: 0
+            top: 0
+            background: url('../images/bookmark.svg') no-repeat center center
+    .category-link
         margin-bottom: 15px
-        a
-            font-size: 12px
-            line-height: 15px
-            letter-spacing: 0.5px
-            font-weight: 900
-            text-transform: uppercase
-            color: $blue75
-    &__heading
+    &__link
         margin-bottom: 10px
+    &__heading
         +roboto
         font-size: 20px
         line-height: 25px
