@@ -419,7 +419,11 @@
             <ul class="special__right">
                 <?php
                 // задаем нужные нам критерии выборки данных из БД
-                $query = new WP_Query('category_name=career');
+                $args = array(
+                    'posts_per_page' => 1,
+                    'category_name' => 'career',
+                );
+                $query = new WP_Query($args);
 
                 // Цикл
                 if ( $query->have_posts() ) {                   
