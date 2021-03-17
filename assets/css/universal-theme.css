@@ -76,7 +76,7 @@ body {
   margin-left: 8px;
 }
 
-.category-link {
+.cat-link {
   display: block;
   font-size: 12px;
   line-height: 15px;
@@ -85,35 +85,35 @@ body {
   letter-spacing: 0.5px;
 }
 
-.category-css {
+.cat-css {
   color: #3BBDC4;
 }
 
-.category-html {
+.cat-html {
   color: #AC8EE3;
 }
 
-.category-javascript {
+.cat-javascript {
   color: #6E99AE;
 }
 
-.category-web-design {
+.cat-web-design {
   color: #FFA34D;
 }
 
-.category-articles {
+.cat-articles {
   color: #4592FF;
 }
 
-.category-career {
+.cat-career {
   color: #FF4F52;
 }
 
-.category-investigation {
+.cat-investigation {
   color: #3DC47E;
 }
 
-.category-photoreport {
+.cat-photoreport {
   color: #AC8EE3;
 }
 
@@ -1482,6 +1482,125 @@ body {
 
 .footer-text {
   max-width: 66%;
+}
+
+.post__header {
+  padding: 60px 0 70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+}
+
+.post__header-top {
+  margin-bottom: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post__header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post__title {
+  margin-bottom: 30px;
+  max-width: 66%;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 70px;
+}
+
+.post__excerpt {
+  margin-bottom: 43px;
+  max-width: 650px;
+  font-size: 18px;
+  line-height: 30px;
+  opacity: 0.85;
+}
+
+.post-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.85;
+}
+
+.post-info-item {
+  margin-right: 20px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.post-info svg {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  fill: #fff;
+  fill-opacity: 0.4;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 900;
+}
+
+.nav-previous a {
+  margin-right: 20px;
+}
+
+.home-icon {
+  margin-right: 6px;
+  fill: #fff;
+  width: 18px;
+  height: 17px;
+}
+
+.home-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 30px;
+  font-weight: 900;
+}
+
+.prev-icon {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.next-icon {
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
 }
 
 .error-404 {

@@ -69,7 +69,7 @@
                                             <?php 
                                             foreach( get_the_category() as $category ) {
                                                 printf(
-                                                    '<a href="%s" class="category-link category-%s">%s</a>',
+                                                    '<a href="%s" class="cat-link cat-%s">%s</a>',
                                                     esc_url(get_category_link($category)),
                                                     esc_html($category -> slug),
                                                     esc_html($category -> name),
@@ -307,7 +307,7 @@
                                     <?php 
                                     foreach( get_the_category() as $category ) {
                                         printf(
-                                            '<a href="%s" class="category-link category-%s">%s</a>',
+                                            '<a href="%s" class="cat-link cat-%s">%s</a>',
                                             esc_url(get_category_link($category)),
                                             esc_html($category -> slug),
                                             esc_html($category -> name),
@@ -316,7 +316,7 @@
                                     ?>   
                                     <a href="<?php the_permalink(); ?>" class="news-column__link">
                                         <h2 class="news-column__heading"><?php the_title(); ?></h2>
-                                    </a>                                    
+                                    </a>
                                     <p class="news-column__excerpt"><?php echo wp_trim_words( get_the_excerpt(), 20); ?></p>
                                     <div class="news-column__info">
                                         <span class="news-column__date"><?php the_time('j F'); ?></span>
@@ -438,7 +438,7 @@
                     <?php 
                     foreach( get_the_category() as $category ) {
                         printf(
-                            '<a href="%s" class="special__category category-link category-%s">%s</a>',
+                            '<a href="%s" class="special__category cat-link cat-%s">%s</a>',
                             esc_url(get_category_link($category)),
                             esc_html($category -> slug),
                             esc_html($category -> name),

@@ -350,7 +350,7 @@ html {
 }
 
 
-.visually-hidden {
+.visually-hidden, .screen-reader-text {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
