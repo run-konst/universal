@@ -8,16 +8,33 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<header class="header">
+<header class="header header-light">
     <div class="container">
         <nav class="header__nav">
             <?php
+                // Получаем логотип без ссылки
+                $logo_img = '';
+                if( $custom_logo_id = get_theme_mod('custom_logo') ){
+                    $logo_img = wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+                        'class'    => 'custom-logo',
+                        'itemprop' => 'logo',
+                    ) );
+                }
+
                 if( has_custom_logo() ){
-                    the_custom_logo();
+                    if (is_front_page()) {
+                        echo '<div class="site-logo">' . $logo_img . 
+                        '<span class="site-name">' . get_bloginfo( 'name' ) . '</span></div>';
+                    } else {
+                        echo '<div class="site-logo">' . get_custom_logo() . 
+                        '<a href="' . get_home_url() . '" class="home-link">
+                        <span class="site-name">' . get_bloginfo( 'name' ) . '</span></a></div>';
+                    }
                 }
                 else {
-                    echo "Universal";
+                    echo '<span class="site-name">' . get_bloginfo( 'name' ) . '</span>';
                 }
+
                 wp_nav_menu( [
                     'theme_location'  => 'header_menu',
                     'container'       => false,

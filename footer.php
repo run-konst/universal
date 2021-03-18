@@ -12,6 +12,20 @@
                     </div>
                     <div class="footer__nav">
                         <?php
+                            $logo_img = '';
+                            if( $custom_logo_id = get_theme_mod('custom_logo') ){
+                                $logo_img = wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+                                    'class'    => 'custom-logo',
+                                    'itemprop' => 'logo',
+                                ) );
+                            }
+                            if( has_custom_logo() ){
+                                if (is_front_page()) {
+                                    echo '<div class="site-logo">' . $logo_img  . '</div>';
+                                } else {
+                                    echo '<div class="site-logo">' . get_custom_logo() . '</div>';
+                                }
+                            }
                             wp_nav_menu( [
                                 'theme_location'  => 'footer_menu',
                                 'container'       => false,

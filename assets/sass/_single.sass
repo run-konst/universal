@@ -1,4 +1,6 @@
 .post
+    &__container
+        position: relative
     &__header
         padding: 60px 0 70px
         background-repeat: no-repeat
@@ -39,6 +41,47 @@
             height: 15px
             fill: #fff
             fill-opacity: 0.4
+    &-author
+        position: absolute
+        right: 150px
+        top: calc(100% - 30px)
+        display: flex
+        flex-direction: column
+        width: 263px
+        background-color: #fff
+        border-radius: 10px
+        border: 1px solid #D9DADB
+        &__info
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 35px
+            padding-bottom: 20px
+            border-bottom: 1px solid #D9DADB
+        &__avatar
+            width: 90px
+            height: 90px
+            margin-bottom: 15px
+            border-radius: 50%
+        &__name
+            margin-bottom: 5px
+            +roboto
+            font-size: 20px
+            line-height: 25px
+            color: $gray100
+            text-align: center
+        &__rank
+            margin-bottom: 15px
+            color: $gray85
+            text-align: center
+        &__post-count
+            font-weight: 900
+            color: $gray100
+        &__link
+            padding: 15px 25px
+            text-align: center
+            font-weight: 900
+            color: $gray100    
 
 .nav
     &-links
