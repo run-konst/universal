@@ -83,6 +83,7 @@
 
     <div class="post-content">
         <div class="container">
+            <div class="invisible-block-right"></div>
             <?php
             the_content(
                 sprintf(
@@ -109,14 +110,21 @@
         </div>
 	</div><!-- .entry-content -->
 
-    <footer class="entry-footer">
-        <?php
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'universal-example' ) );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universal-example' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
-        ?>
+    <footer class="post-footer">
+        <div class="container">
+            <?php
+                $tags_list = get_the_tag_list( '', esc_html_x( '', 'list item separator', 'universaltheme' ) );
+                if ( $tags_list ) {
+                    /* translators: 1: list of tags. */
+                    printf( '<div class="post-footer__tags">' . esc_html__( '%1$s', 'universal-example' ) . '</div>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                }                
+            ?>
+            <div class="post-footer__social">
+                <h2 class="post-footer__social-title">Поддержите репостом</h2>
+                <?php meks_ess_share(); ?>
+            </div>
+        </div>
+        
     </footer><!-- .entry-footer -->
 
 </article>

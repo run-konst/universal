@@ -81,7 +81,33 @@
             padding: 15px 25px
             text-align: center
             font-weight: 900
-            color: $gray100    
+            color: $gray100
+    &-footer
+        margin-bottom: 30px
+        &__tags
+            padding: 15px 0 30px
+            margin-bottom: 60px
+            display: flex
+            a
+                padding: 5px 15px
+                font-weight: 900
+                border: 1px solid #D9DADB
+                border-radius: 5px
+                margin-right: 10px
+        &__social
+            margin-bottom: 60px 
+            padding: 30px 0 
+            max-width: 66%
+            border-top: 1px solid #D9DADB
+            &-title
+                +roboto
+                font-size: 25px
+                line-height: 30px
+                color: $gray100
+                margin-bottom: 20px
+
+.single-main
+    background-color: #fff
 
 .nav
     &-links
@@ -116,3 +142,12 @@
     width: 20px
     height: 20px
     fill: #fff
+
+.meks_ess
+    margin: 0
+    justify-content: flex-start !important
+    >*
+        margin-right: 15px !important
+        margin-bottom: 10px !important
+        flex-basis: 130px !important
+        flex-grow: 0 !important

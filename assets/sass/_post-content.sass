@@ -1,6 +1,80 @@
 .post-content
     padding-top: 60px
-    background-color: #fff
+    .invisible-block-right
+        width: 400px
+        height: 200px
+        float: right
     p
-        &:first-child
-            max-width: 60%
+        margin-bottom: 30px
+        font-size: 18px
+        line-height: 1.66
+        text-align: justify
+    div
+        margin-bottom: 0
+    &__first
+        &::first-letter
+            font-size: 100px
+            line-height: 1
+            font-weight: 900
+            color: $blue75
+            float: left
+            margin-right: 5px
+    h1, h2, h3, h4, h5, h6
+        margin-top: 45px
+        margin-bottom: 30px
+        +roboto
+        color: $gray100
+    h2
+        font-size: 25px
+        line-height: 30px
+    img
+        height: auto
+        display: block
+    ul li
+        list-style: disc
+    ul, ol
+        margin-bottom: 30px
+        font-size: 16px
+        li::marker
+            color: $blue75
+    figure
+        margin: 0
+        margin-bottom: 30px
+    figcaption
+        margin-bottom: 0
+        margin-top: 10px
+    table
+        border-collapse: collapse
+    td
+        border: 1px solid $gray100
+        padding: 5px
+    blockquote
+        margin: 0
+        margin-top: 80px
+        position: relative
+        +roboto
+        color: $gray100
+        font-size: 25px
+        line-height: 30px
+        >*
+            position: relative
+        &::before
+            content: ''
+            position: absolute
+            top: -20px
+            left: -20px
+            width: 70px
+            height: 70px
+            background: url('../images/quote.svg') no-repeat center center
+    
+.wp-block-gallery
+    overflow: hidden
+    position: relative
+    height: 70vh
+
+.blocks-gallery-grid
+    flex-wrap: nowrap
+    height: 100%
+
+.blocks-gallery-item
+    margin: 0 !important

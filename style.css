@@ -358,7 +358,7 @@ html {
     margin: -1px;      
 }
   
-h1, h2, h3, h4, h5, h6, ul, p, input, textarea, button {
+h1, h2, h3, h4, h5, h6, ul, ol, p, input, textarea, button {
       margin: 0;
       padding: 0;
 }
@@ -386,7 +386,7 @@ button {
       outline: 2px solid black;
 }
   
-li {
+ul li {
       list-style: none;
 }
   
