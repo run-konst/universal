@@ -1,0 +1,130 @@
+.comments
+    &-area
+        max-width: 750px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 30px
+    &__title
+        +roboto
+        font-size: 40px
+        line-height: 50px
+        color: $gray100
+    &__number
+        font-family: 'Lato'
+        font-weight: 400
+        color: #939699
+    &__add-link
+        font-weight: 900
+        color: $gray100
+        padding: 10px 19px
+        border: 1px solid #D9DADB
+        border-radius: 20px
+        display: flex
+        align-items: center
+
+.comment
+    &__body
+        padding: 20px 0 30px
+        border-top: 1px solid #D9DADB
+        display: flex
+    &__avatar
+        margin-right: 15px
+        display: flex
+        img
+            width: 75px
+            height: 75px
+            border-radius: 50%
+    &__main
+        flex-grow: 1
+        p
+            font-size: 18px
+            line-height: 30px
+            margin-bottom: 15px
+    &__author
+        display: inline-block
+        margin-bottom: 10px
+        +roboto
+        font-style: normal
+        font-size: 16px
+        line-height: 25px
+        margin-right: 5px
+        a
+    &__meta
+        font-size: 12px
+        line-height: 25px
+        color: #939699
+    &-edit-link
+        color: $gray100
+        margin-left: 20px
+    &-reply
+        display: flex
+        align-items: center
+        &-link
+            font-size: 12px
+            line-height: 15px
+            color: $gray100
+            margin-right: 15px
+    .children
+        margin-left: 85px
+    &-form
+        padding: 23px 46px 42px 25px
+        background-color: #F5F5F5
+        border-radius: 10px
+        &__label
+            display: block
+            margin-left: 95px
+            margin-bottom: 15px
+            +roboto
+            font-size: 20px
+            line-height: 25px
+            color: $gray100
+        &__comment
+            display: flex
+            margin-bottom: 15px
+        &__avatar
+            margin-right: 20px
+            img
+                width: 75px
+                height: 75px
+                border-radius: 50%
+        &__textarea-wrapper
+            flex-basis: 100%
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: 28.5px
+                left: -11px
+                width: 13px
+                height: 18px
+                background: url('../images/angle.svg') no-repeat center center        
+            textarea
+                display: block
+                width: 100%
+                border-color: #D9DADB
+                border-radius: 5px
+                height: 130px
+    &__submit-btn
+        margin-left: 95px
+        display: inline-block
+        padding: 10px 45px 10px 20px
+        font-weight: 900
+        color: #fff
+        border: none
+        border-radius: 20px
+        background: url('../images/arrow.svg') no-repeat right 20px center        
+        background-color: $blue75
+
+.pencil-icon
+    width: 18px
+    height: 18px
+    fill: #BCBFC2
+    margin-right: 10px
+
+.reply-icon
+    margin-right: 5px
+    width: 15px
+    height: 15px
+    fill: #BCBFC2
