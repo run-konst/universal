@@ -1713,7 +1713,7 @@ body {
 
 .post-footer__social {
   margin-bottom: 60px;
-  padding: 30px 0;
+  padding-top: 30px;
   max-width: 66%;
   border-top: 1px solid #D9DADB;
 }
@@ -1780,7 +1780,8 @@ body {
 }
 
 .meks_ess {
-  margin: 0;
+  margin: 0 !important;
+  padding-bottom: 20px !important;
   -webkit-box-pack: start !important;
       -ms-flex-pack: start !important;
           justify-content: flex-start !important;
@@ -1915,6 +1916,76 @@ body {
 
 .blocks-gallery-item {
   margin: 0 !important;
+}
+
+.post-sidebar {
+  background-color: #f5f5f5;
+  padding-top: 60px;
+  padding-bottom: 90px;
+  margin-bottom: 90px;
+}
+
+.post-sidebar__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post-sidebar__item {
+  width: calc( 25% - 22.5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post-sidebar__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.post-sidebar__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.post-sidebar__heading {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  color: #262D33;
+  margin-bottom: 15px;
+}
+
+.post-sidebar__info {
+  color: #939699;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: auto;
+}
+
+.post-sidebar svg {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  margin-right: 5px;
+  fill: #BCBFC2;
+}
+
+.post-sidebar span {
+  margin-right: 10px;
 }
 
 .comments-area {
@@ -2119,6 +2190,15 @@ body {
   width: 15px;
   height: 15px;
   fill: #BCBFC2;
+}
+
+.no-comments {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: #262D33;
+  margin-bottom: 20px;
 }
 
 .error-404 {

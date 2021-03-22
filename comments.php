@@ -105,18 +105,19 @@ function universal_theme_comment( $comment, $args, $depth ) {
 
 	<?php
 	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
+	if ( have_comments() ) {
 		?>
         <div class="comments__header">
             <h2 class="comments__title">
                 <?php echo 'Комментарии ' . '<span class="comments__number">' . get_comments_number() . '</span>'; ?>
             </h2>
-            <a href="#" class="comments__add-link">
+            <a href="#commentform" class="comments__add-link">
                 <svg class="pencil-icon">
                     <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#pencil"></use>
                 </svg>
-                <span>Добавить комментарий</span>     
+                <span>Добавить комментарий</span>   
             </a>
+
         </div>
 
 		<?php the_comments_navigation(); ?>
@@ -144,7 +145,11 @@ function universal_theme_comment( $comment, $args, $depth ) {
 			<?php
 		endif;
 
-	endif; // Check for have_comments().
+    } else {
+        ?>
+        <h3 class="no-comments">Комментариев нет</h3>
+        <?php
+    }; // Check for have_comments().
 
 	comment_form(array(
         'title_reply'          => '',
