@@ -27,10 +27,7 @@ class Post_Posts_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function widget( $args, $instance ) {
-		/*
-        $title = $instance['title'];
 		$count = $instance['count'];
-        */
         ?>
 		
 <aside class="post-sidebar">
@@ -42,7 +39,7 @@ class Post_Posts_Widget extends WP_Widget {
             $currentPost = $post -> ID;
 
             $myposts = get_posts([ 
-                'numberposts' => 4,
+                'numberposts' => $count,
                 'category_name' => $cat,
                 'exclude' => $currentPost
             ]);
@@ -87,20 +84,22 @@ class Post_Posts_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function form( $instance ) {
+		
+		$count = @ $instance['count'] ?: '4';
+		?>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Количество статей:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" type="text" value="<?php echo esc_attr( $count ); ?>">
+		</p>
+		<?php
         /*
 		$title = @ $instance['title'] ?: 'Недавние статьи';
-		$count = @ $instance['count'] ?: '7';
 
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
-		<p>
-			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Количество статей:' ); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" type="text" value="<?php echo esc_attr( $count ); ?>">
-		</p>
-		<?php
         */
     }
 
@@ -114,14 +113,14 @@ class Post_Posts_Widget extends WP_Widget {
 	 *
 	 * @return array данные которые будут сохранены
 	 */
-    /*
+
 	function update( $new_instance, $old_instance ) {
 		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		/*$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';*/
 		$instance['count'] = ( ! empty( $new_instance['count'] ) ) ? strip_tags( $new_instance['count'] ) : '';
 		return $instance;
 	}
-    */
+
 	// скрипт виджета
 	function add_post_posts_widget_scripts() {
 		// фильтр чтобы можно было отключить скрипты

@@ -1921,7 +1921,7 @@ body {
 .post-sidebar {
   background-color: #f5f5f5;
   padding-top: 60px;
-  padding-bottom: 90px;
+  padding-bottom: 70px;
   margin-bottom: 90px;
 }
 
@@ -1929,6 +1929,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .post-sidebar__item {
@@ -1940,9 +1942,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.post-sidebar__item:not(:last-child) {
+.post-sidebar__item:not(:nth-child(4n)) {
   margin-right: 30px;
 }
 
