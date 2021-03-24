@@ -41,5 +41,12 @@ function universal_theme_widgets_init() {
 			'after_widget'  => '</div>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Статьи на странице поста', 'universaltheme' ),
+			'id'            => 'post-posts',
+			'description'   => esc_html__( 'Добавьте статьи сюда', 'universaltheme' ),
+		)
+	);
 }
 add_action( 'widgets_init', 'universal_theme_widgets_init' );

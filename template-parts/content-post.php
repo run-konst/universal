@@ -128,47 +128,4 @@
     </footer><!-- .entry-footer -->
 
 </article>
-<aside class="post-sidebar">
-    <div class="post-sidebar__container container">
-        <?php
-            global $post;
-            $category = get_the_category();
-            $cat = $category[0] -> slug;
-            $currentPost = $post -> ID;
-
-            $myposts = get_posts([ 
-                'numberposts' => 4,
-                'category_name' => $cat,
-                'exclude' => $currentPost
-            ]);
-
-            if( $myposts ){
-                foreach( $myposts as $post ){
-                    setup_postdata( $post );
-                    ?>
-
-                    <a href="<?php the_permalink(); ?>" class="post-sidebar__item">
-                        <img class="post-sidebar__img" src="<?php the_post_thumbnail_url('smaller-thumb'); ?>" alt="<?php the_title(); ?>">
-                        <h2 class="post-sidebar__heading"><?php echo wp_trim_words( get_the_title(), 10); ?></h2>
-                        <div class="post-sidebar__info">
-                            <svg class="arrow-icon">
-                                <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#views"></use>
-                            </svg>
-                            <span>1,904</span>
-                            <svg class="arrow-icon">
-                                <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#comment"></use>
-                            </svg>
-                            <span><?php comments_number('0', '1', '%'); ?></span>   
-                        </div>
-                    </a>
-                    
-                    <?php 
-                }
-            } else {
-                // Постов не найдено
-            }
-
-            wp_reset_postdata(); // Сбрасываем $post
-        ?>
-    </div>
-</aside>
+ <?php dynamic_sidebar( 'post-posts' ); ?>
