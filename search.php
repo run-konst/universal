@@ -40,8 +40,16 @@
                 <?php 
                 $args = array(
                     'mid_size'     => 2,     // количество страниц вокруг текущей
-                    'prev_text'    => 'Назад',
-                    'next_text'    => 'Вперед',
+                    'prev_text'    => '
+                    <svg class="next-icon">
+                    <use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#arrow"></use>
+                    </svg>
+                    <span>Назад</span>',
+                    'next_text'    => '
+                    <span>Вперед</span>
+                    <svg class="next-icon">
+                    <use xlink:href="' . get_template_directory_uri() . '/assets/images/sprite.svg#arrow"></use>
+                    </svg>',
                 );
                 the_posts_pagination($args); 
                 ?>

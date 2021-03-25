@@ -2343,6 +2343,13 @@ body {
       flex-basis: 230px;
 }
 
+.nav-links .prev svg {
+  margin-left: 0;
+  margin-right: 5px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .nav-links .next {
   -ms-flex-preferred-size: 230px;
       flex-basis: 230px;
@@ -2352,6 +2359,10 @@ body {
 .nav-links .current {
   font-weight: 900;
   color: #4592FF;
+}
+
+.nav-links svg {
+  fill: #BCBFC2;
 }
 
 .error-404 {
