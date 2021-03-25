@@ -48,5 +48,14 @@ function universal_theme_widgets_init() {
 			'description'   => esc_html__( 'Добавьте статьи сюда', 'universaltheme' ),
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Сайдбар на странице поиска', 'universaltheme' ),
+			'id'            => 'search__sidebar',
+			'description'   => esc_html__( 'Добавьте виджеты сюда.', 'universaltheme' ),
+			'before_widget' => '<div id="%1$s" class="%2$s">',
+			'after_widget'  => '</div>',
+		)
+	);
 }
 add_action( 'widgets_init', 'universal_theme_widgets_init' );

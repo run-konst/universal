@@ -307,7 +307,7 @@
                                     <?php 
                                     foreach( get_the_category() as $category ) {
                                         printf(
-                                            '<a href="%s" class="cat-link cat-%s">%s</a>',
+                                            '<a href="%s" class="news-column__cat-link cat-link cat-%s">%s</a>',
                                             esc_url(get_category_link($category)),
                                             esc_html($category -> slug),
                                             esc_html($category -> name),
@@ -323,6 +323,9 @@
                                         <span class="news-column__comments"><?php comments_number('0', '1', '%'); ?></span>
                                         <span class="news-column__likes">42</span>
                                     </div>
+                                    <svg class="bookmark-icon">
+                                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#bookmark"></use>
+                                    </svg>
                                 </div>                            
                             </li>
 

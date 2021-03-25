@@ -1,0 +1,47 @@
+.search
+    &__results
+        margin-top: 40px
+        margin-bottom: 115px
+    &__title
+        +roboto
+        font-size: 40px
+        line-height: 50px
+        color: $gray100
+        margin-bottom: 30px
+    &__left
+        background-color: #e5e5e5
+        padding: 0
+    &__list
+        padding: 0 25px
+        margin-bottom: 40px
+        overflow: hidden
+        border-radius: 10px
+        background-color: #fff
+    &__sidebar
+        >*
+            background-color: #fff
+            border-radius: 10px
+            margin-bottom: 30px
+
+
+.pagination
+    background-color: #fff
+    border-radius: 10px
+
+.nav-links
+    display: flex
+    justify-content: center
+    >*
+        padding: 17px 0
+        display: flex
+        justify-content: center
+        flex-basis: 64px
+        border-right: 1px solid #e5e5e5
+    .prev
+        flex-basis: 230px
+    .next
+        flex-basis: 230px
+        border-right: none
+    .current
+        font-weight: 900
+        color: $blue75
