@@ -1,6 +1,24 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer__container">
+                    <?php if( ! is_page( 'thankyou' ) ) : ?>
+                        <form class="subscribe" action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
+                            <h3 class="subscribe__title">Подпишитесь на нашу рассылку</h3>
+                            <div class="subscribe__wrapper">
+                                <!-- Поле Email (обязательно) -->
+                                <input class="subscribe__input" type="text" name="email" placeholder="Email" required>
+                                <!-- Токен списка -->
+                                <!-- Получить API ID на: https://app.getresponse.com/campaign_list.html -->
+                                <input type="hidden" name="campaign_token" value="BHWmA">
+                                <!-- Добавить подписчика в цикл на определенный день (по желанию) -->
+                                <input type="hidden" name="start_day" value="0">
+                                <!-- Страница благодарности (по желанию) -->
+                                <input type="hidden" name="thankyou_url" value="<?php echo home_url('thankyou') ?>"/>
+                                <!-- Кнопка подписаться -->
+                                <button class="subscribe__btn" type="submit">Подписаться</button>
+                            </div>
+                        </form>
+                    <?php endif; ?>
                     <?php
                     if ( ! is_active_sidebar( 'footer-sidebar' ) ) {
                         return;
