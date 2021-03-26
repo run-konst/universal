@@ -2,7 +2,7 @@
 
 <main class="search__results">
     <div class="container">
-        <h2 class="search__title">Результаты поиска по запросу:</h2>
+        <h2 class="search__title">Результаты поиска по запросу: <?php echo get_search_query(); ?></h2>
         
         <div class="news-column__container">
             <div class="news-column__left search__left">
