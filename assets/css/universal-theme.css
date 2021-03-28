@@ -2499,6 +2499,114 @@ body {
   margin-right: 5px;
 }
 
+.contacts-page {
+  padding-top: 50px;
+  padding-bottom: 120px;
+  background-color: #262D33;
+  color: #fff;
+}
+
+.contacts-page__title {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  margin-bottom: 27px;
+}
+
+.contacts-page__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts-page__left {
+  -ms-flex-preferred-size: 460px;
+      flex-basis: 460px;
+  margin-right: 80px;
+}
+
+.contacts-page__right {
+  -ms-flex-preferred-size: 263px;
+      flex-basis: 263px;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.contact-form__heading {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 28px;
+}
+
+.contact-form__item {
+  padding: 10px 15px;
+  background-color: #fff;
+  color: #4B5157;
+  border: 1px solid #D9DADB;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.contact-form__item::-webkit-input-placeholder {
+  color: #939699;
+}
+
+.contact-form__item:-ms-input-placeholder {
+  color: #939699;
+}
+
+.contact-form__item::-ms-input-placeholder {
+  color: #939699;
+}
+
+.contact-form__item::placeholder {
+  color: #939699;
+}
+
+.contact-form__textarea {
+  margin-bottom: 20px;
+  height: 120px;
+}
+
+.contact-form__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #4592FF;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.wpcf7-form span {
+  display: block;
+}
+
+.wpcf7-form span input, .wpcf7-form span textarea {
+  width: 100%;
+}
+
+.wpcf7-form br {
+  display: none;
+}
+
 .error-404 {
   display: -webkit-box;
   display: -ms-flexbox;

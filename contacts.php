@@ -1,0 +1,39 @@
+<?php 
+/*
+Template Name: Страница контакты
+Template Post Type: page
+*/
+?>
+
+<?php get_header(); ?>
+
+<main class="contacts-page">
+    <div class="container">
+        <h1 class="contacts-page__title"><?php the_title(); ?></h1>
+        <div class="contacts-page__content">
+            <div class="contacts-page__left">
+                <form class="contact-form" method="POST">
+                    <p class="contact-form__heading">Через форму обратной связи</p>
+                    <input class="contact-form__item" type="text" name="contact_name" placeholder="Ваше имя">
+                    <input class="contact-form__item" type="email" name="contact_email" placeholder="Ваш Email">
+                    <textarea name="contact_comment" class="contact-form__textarea contact-form__item" placeholder="Ваш вопрос"></textarea>
+                    <button class="contact-form__btn" type="submit">
+                        <span>Отправить</span>
+                        <svg class="arrow-icon">
+                            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#arrow"></use>
+                        </svg>
+                    </button>            
+                </form>
+                <?php echo do_shortcode('[contact-form-7 id="341" title="Contact form"]'); ?>
+            </div>
+            <div class="contacts-page__right">
+                <p class="contact-form__heading">Или по этим контактам</p>
+            3522 I-75, Business Spur Sault Sainte Marie, MI, 49783            
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+<?php get_footer(); ?>
