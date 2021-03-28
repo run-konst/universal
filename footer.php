@@ -61,9 +61,12 @@
                     </div>
                     <div class="footer__bottom">
                         <?php dynamic_sidebar( 'footer-text' ); ?>
-                        <span class="footer__copyright">
-                            <?php echo '&copy; ' . date('Y') . ' ' . get_bloginfo( 'name' ); ?>
-                        </span>                     
+                        <div class="footer__right">
+                            <span class="footer__copyright">
+                                <?php echo '&copy; ' . date('Y') . ' ' . get_bloginfo( 'name' ); ?>
+                            </span>
+                            <a href="mailto:<?php the_field('email'); ?>" class="footer__mail"><?php the_field('email'); ?></a>
+                        </div>                    
                     </div>
                 </div>
 

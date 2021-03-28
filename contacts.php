@@ -28,7 +28,11 @@ Template Post Type: page
             </div>
             <div class="contacts-page__right">
                 <p class="contact-form__heading">Или по этим контактам</p>
-            3522 I-75, Business Spur Sault Sainte Marie, MI, 49783            
+                <div class="contact-field">
+                    <a class="contact-field__mail" href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
+                    <address class="contact-field__address"><?php the_field('address'); ?></address>
+                    <a class="contact-field__phone" href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>                
+                </div>          
             </div>
         </div>
     </div>

@@ -1564,6 +1564,19 @@ body {
   max-width: 66%;
 }
 
+.footer__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .subscribe {
   margin-bottom: 70px;
   display: -webkit-box;
@@ -2605,6 +2618,25 @@ body {
 
 .wpcf7-form br {
   display: none;
+}
+
+.contact-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-field__mail {
+  margin-bottom: 15px;
+}
+
+.contact-field__address {
+  margin-bottom: 15px;
+  font-style: normal;
 }
 
 .error-404 {
