@@ -65,7 +65,7 @@
                             <span class="footer__copyright">
                                 <?php echo '&copy; ' . date('Y') . ' ' . get_bloginfo( 'name' ); ?>
                             </span>
-                            <a href="mailto:<?php the_field('email'); ?>" class="footer__mail"><?php the_field('email'); ?></a>
+                            <a href="mailto:<?php echo do_shortcode('[acf field="email" post_id="98"]'); ?>" class="footer__mail"><?php echo do_shortcode('[acf field="email" post_id="98"]'); ?></a>
                         </div>                    
                     </div>
                 </div>
