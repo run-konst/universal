@@ -29,7 +29,12 @@ Template Post Type: page
             <div class="contacts-page__right">
                 <p class="contact-form__heading">Или по этим контактам</p>
                 <div class="contact-field">
-                    <a class="contact-field__mail" href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
+                    <?php
+                        $email = get_post_meta( get_the_ID(), 'email', true );
+                        if ($email) { ?>
+                            <a class="contact-field__mail" href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
+                        <?php }
+                    ?>
                     <address class="contact-field__address"><?php the_field('address'); ?></address>
                     <a class="contact-field__phone" href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>                
                 </div>          
