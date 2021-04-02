@@ -2649,18 +2649,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 .lesson__header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-left: auto;
 }
 
 .lesson__header-nav svg {
@@ -2699,6 +2694,48 @@ body {
 
 .lesson .post-footer__social {
   margin-bottom: 0;
+}
+
+.lesson-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.lesson-list__item {
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.lesson-list__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.lesson-list__title {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  color: #262D33;
+  font-size: 20px;
+  line-height: 25px;
+  margin-right: auto;
+}
+
+.lesson-list__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .error-404 {

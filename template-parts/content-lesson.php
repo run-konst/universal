@@ -3,6 +3,11 @@
         <header class="entry-header <?php echo get_post_type(); ?>__header">
             <!-- Navigation -->
             <div class="lesson__header-top">
+                <?php 
+                $taxonomies = get_the_taxonomies( );
+                $genre = $taxonomies['genre'];
+                echo $genre; 
+                ?>
                 <div class="lesson__header-nav">
                     <a href="<?php echo get_home_url(); ?>" class="home-link">
                         <svg class="home-icon">
