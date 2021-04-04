@@ -4,9 +4,10 @@
             <!-- Navigation -->
             <div class="lesson__header-top">
                 <?php 
-                $taxonomies = get_the_taxonomies( );
-                $genre = $taxonomies['genre'];
-                echo $genre; 
+                $term = get_the_terms(get_the_ID(), 'genre')[0];
+                $link = get_term_link($term);
+                $genre = $term -> name;
+                echo '<a class="lesson__genre" href="' . $link . '">' . $genre . '</a>'
                 ?>
                 <div class="lesson__header-nav">
                     <a href="<?php echo get_home_url(); ?>" class="home-link">
