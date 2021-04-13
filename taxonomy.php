@@ -2,6 +2,7 @@
 
 <main class="category-page">
     <div class="container">
+        <?php if(function_exists('the_breadcrumbs')) the_breadcrumbs(); ?>
         <h2 class="category-page__title"><?php single_cat_title(); ?></h2>
         <ul class="lesson-list">
         <?php while ( have_posts() ){ the_post(); ?>

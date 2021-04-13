@@ -10,7 +10,13 @@
 
                 <?php while ( have_posts() ){ the_post(); ?>
                     <li class="news-column__item">
-                        <img src="<?php the_post_thumbnail_url('small-thumb'); ?>" alt="<?php the_title(); ?>" class="news-column__img">
+                        <img src="
+                        <?php if (has_post_thumbnail()) {
+                            the_post_thumbnail_url('small-thumb');
+                        } else {
+                            echo get_template_directory_uri(  ) . '/assets/images/no-image.jpg';
+                        } ?>" alt="<?php the_title(); ?>
+                        " class="news-column__img">
                         <div class="news-column__article">
                             <?php 
                             foreach( get_the_category() as $category ) {
@@ -18,7 +24,7 @@
                                     '<a href="%s" class="news-column__cat-link cat-link cat-%s">%s</a>',
                                     esc_url(get_category_link($category)),
                                     esc_html($category -> slug),
-                                    esc_html($category -> name),
+                                    esc_html($category -> name)
                                 ); 
                             }
                             ?>

@@ -1166,6 +1166,7 @@ body {
 }
 
 .news-column__article {
+  width: calc(58% - 25px);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2084,6 +2085,101 @@ body {
   margin-right: 10px;
 }
 
+.page {
+  background-color: #fff;
+}
+
+.page-content p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.66;
+  text-align: justify;
+}
+
+.page-content div {
+  margin-bottom: 0;
+}
+
+.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6 {
+  margin-top: 45px;
+  margin-bottom: 30px;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  color: #262D33;
+}
+
+.page-content h1 {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.page-content h2 {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.page-content img {
+  height: auto;
+  display: block;
+}
+
+.page-content ul li {
+  list-style: disc;
+}
+
+.page-content ul, .page-content ol {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.page-content ul li::marker, .page-content ol li::marker {
+  color: #4592FF;
+}
+
+.page-content figure {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.page-content figcaption {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.page-content table {
+  border-collapse: collapse;
+}
+
+.page-content td {
+  border: 1px solid #262D33;
+  padding: 5px;
+}
+
+.page-content blockquote {
+  margin: 0;
+  margin-top: 80px;
+  position: relative;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  color: #262D33;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.page-content blockquote > * {
+  position: relative;
+}
+
+.page-content blockquote::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 70px;
+  height: 70px;
+  background: url("../images/quote.svg") no-repeat center center;
+}
+
 .comments-area {
   max-width: 750px;
 }
@@ -2754,6 +2850,26 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.breadcrumbs {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 900;
+}
+
+.breadcrumbs__separator {
+  margin: 0 10px;
+  width: 10px;
+  height: 10px;
+  background: url("../images/separator.svg") no-repeat center center;
 }
 
 .error-404 {

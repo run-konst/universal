@@ -72,7 +72,7 @@
                                                     '<a href="%s" class="cat-link cat-%s">%s</a>',
                                                     esc_url(get_category_link($category)),
                                                     esc_html($category -> slug),
-                                                    esc_html($category -> name),
+                                                    esc_html($category -> name)
                                                 ); 
                                             }
                                             ?>                                        
@@ -302,7 +302,13 @@
                             ?>
 
                             <li class="news-column__item">
-                                <img src="<?php the_post_thumbnail_url('small-thumb'); ?>" alt="<?php the_title(); ?>" class="news-column__img">
+                                <img src="
+                                <?php if (has_post_thumbnail()) {
+                                        the_post_thumbnail_url('small-thumb');
+                                    } else {
+                                        echo get_template_directory_uri(  ) . '/assets/images/no-image.jpg';
+                                    } ?>" alt="<?php the_title(); ?>
+                                    " alt="<?php the_title(); ?>" class="news-column__img">
                                 <div class="news-column__article">
                                     <?php 
                                     foreach( get_the_category() as $category ) {
@@ -310,7 +316,7 @@
                                             '<a href="%s" class="news-column__cat-link cat-link cat-%s">%s</a>',
                                             esc_url(get_category_link($category)),
                                             esc_html($category -> slug),
-                                            esc_html($category -> name),
+                                            esc_html($category -> name)
                                         ); 
                                     }
                                     ?>   
@@ -386,7 +392,7 @@
                                     printf(
                                         '<a href="%s" class="photo-report__category">%s</a>',
                                         esc_url(get_category_link($category)),
-                                        esc_html($category -> name),
+                                        esc_html($category -> name)
                                     ); 
                                 }
                                 $author_id = get_the_author_meta( 'ID' ); 
@@ -444,7 +450,7 @@
                             '<a href="%s" class="special__category cat-link cat-%s">%s</a>',
                             esc_url(get_category_link($category)),
                             esc_html($category -> slug),
-                            esc_html($category -> name),
+                            esc_html($category -> name)
                         ); 
                     }
                     ?>

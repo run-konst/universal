@@ -12,7 +12,7 @@
                         '<a href="%s" class="cat-link cat-%s">%s</a>',
                         esc_url(get_category_link($category)),
                         esc_html($category -> slug),
-                        esc_html($category -> name),
+                        esc_html($category -> name)
                     ); 
                 }
                 ?>
