@@ -8,8 +8,8 @@ class Recent_Posts_Widget extends WP_Widget {
 		// __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
 		parent::__construct(
 			'recent_posts_widget', 
-			'Недавние статьи',
-			array( 'description' => 'Недавние статьи', 
+			__( 'Recent posts', 'universaltheme' ),
+			array( 'description' => __( 'Recent posts', 'universaltheme' ), 
 					'classname' => 'recent-posts-widget', )
 		);
 
@@ -53,7 +53,7 @@ class Recent_Posts_Widget extends WP_Widget {
 									<span class="recent-posts-widget__date">
 									<?php
 									$time_diff = human_time_diff( get_post_time('U'), current_time('timestamp') );
-									echo "$time_diff назад";
+									echo $time_diff . ' ' . __( 'ago', 'universaltheme' );
 									?>
 									</span>
 									<span class="recent-posts-widget__count"><?php echo $i ?></span>		
@@ -79,16 +79,16 @@ class Recent_Posts_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function form( $instance ) {
-		$title = @ $instance['title'] ?: 'Недавние статьи';
+		$title = @ $instance['title'] ?: __( 'Recent posts', 'universaltheme' );
 		$count = @ $instance['count'] ?: '7';
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'universaltheme' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Количество статей:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Number of posts:', 'universaltheme' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" type="text" value="<?php echo esc_attr( $count ); ?>">
 		</p>
 		<?php 

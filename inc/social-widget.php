@@ -8,8 +8,8 @@ class Social_Widget extends WP_Widget {
 		// __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
 		parent::__construct(
 			'social_widget', 
-			'Социальные сети',
-			array( 'description' => 'Социальные сети', 
+			__( 'Social networks', 'universaltheme' ),
+			array( 'description' => __( 'Social networks', 'universaltheme' ), 
 					'classname' => 'social-widget', )
 		);
 
@@ -33,7 +33,7 @@ class Social_Widget extends WP_Widget {
 		$twitter = $instance['twitter'];
 
 		echo $args['before_widget'];
-		echo  '<h2 class="social-widget__heading">Наши соцсети</h2><ul class="social-widget__list">';
+		echo  '<h2 class="social-widget__heading">' . __( 'Our social networks', 'universaltheme' ) . '</h2><ul class="social-widget__list">';
 		if ( ! empty( $facebook ) ) { echo '<li class="social-widget__item"><a class="social-widget__link social-facebook" target="_blank" href="' . $facebook . '"></a></li>'; }
 		if ( ! empty( $instagram ) ) { echo '<li class="social-widget__item"><a class="social-widget__link social-instagram" target="_blank" href="' . $instagram . '"></a></li>'; }
 		if ( ! empty( $youtube ) ) { echo '<li class="social-widget__item"><a class="social-widget__link social-youtube" target="_blank" href="' . $youtube . '"></a></li>'; }
@@ -54,19 +54,19 @@ class Social_Widget extends WP_Widget {
 
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'facebook' ); ?>"><?php _e( 'Ссылка на facebook:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'facebook' ); ?>"><?php _e( 'Facebook link:', 'universaltheme' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'facebook' ); ?>" name="<?php echo $this->get_field_name( 'facebook' ); ?>" type="text" value="<?php echo esc_attr( $facebook ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'instagram' ); ?>"><?php _e( 'Ссылка на instagram:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'instagram' ); ?>"><?php _e( 'Instagram link:', 'universaltheme' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'instagram' ); ?>" name="<?php echo $this->get_field_name( 'instagram' ); ?>" type="text" value="<?php echo esc_attr( $instagram ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'youtube' ); ?>"><?php _e( 'Ссылка на youtube:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'youtube' ); ?>"><?php _e( 'Youtube link:', 'universaltheme' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'youtube' ); ?>" name="<?php echo $this->get_field_name( 'youtube' ); ?>" type="text" value="<?php echo esc_attr( $youtube ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'twitter' ); ?>"><?php _e( 'Ссылка на twitter:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'twitter' ); ?>"><?php _e( 'Twitter link:', 'universaltheme' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'twitter' ); ?>" name="<?php echo $this->get_field_name( 'twitter' ); ?>" type="text" value="<?php echo esc_attr( $twitter ); ?>">
 		</p>
 		<?php 

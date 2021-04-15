@@ -2,7 +2,7 @@
 
 <main class="search__results">
     <div class="container">
-        <h2 class="search__title">Результаты поиска по запросу: <?php echo get_search_query(); ?></h2>
+        <h2 class="search__title"><?php echo __( 'Search results', 'universaltheme' ) . ': ' .  get_search_query(); ?></h2>
         
         <div class="news-column__container">
             <div class="news-column__left search__left">
@@ -59,15 +59,15 @@
                 );
                 the_posts_pagination($args); 
                 ?>
+                <?php if ( ! have_posts() ){ ?>
+                    <?php echo _x( 'No results', 'search', 'universaltheme' ) . '.'; ?>
+                <?php } ?> 
             </div>                    
             <div class="news-column__right">
                 <aside class="search__sidebar">
                     <?php dynamic_sidebar( 'search__sidebar' ); ?>
                 </aside>                  
-            </div> 
-            <?php if ( ! have_posts() ){ ?>
-                Записей нет.
-            <?php } ?>       
+            </div>       
         </div>
     </div>
 </main>

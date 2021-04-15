@@ -8,7 +8,7 @@
 function the_breadcrumbs() {
 
 	/* === ОПЦИИ === */
-	$text['home']     = 'Главная'; // текст ссылки "Главная"
+	$text['home']     = __( 'Home', 'universaltheme' ); // текст ссылки "Главная"
 	$text['category'] = '%s'; // текст для страницы рубрики
 	$text['search']   = 'Результаты поиска по запросу "%s"'; // текст для страницы с результатами поиска
 	$text['tag']      = '%s'; // текст для страницы тега
@@ -56,7 +56,7 @@ function the_breadcrumbs() {
 		if ( is_category() ) {
 			$parents = get_ancestors( get_query_var('cat'), 'category' );
             echo $sep;
-            echo 'Категории';
+            _e( 'Categories', 'universaltheme' ) ;
 			foreach ( array_reverse( $parents ) as $cat ) {
 				$position += 1;
 				if ( $position > 1 ) echo $sep;
@@ -182,7 +182,7 @@ function the_breadcrumbs() {
 
 		} elseif ( is_tag() ) {
             echo $sep;
-            echo 'Теги';
+            _e( 'Tags', 'universaltheme' ) ;
 			if ( get_query_var( 'paged' ) ) {
 				$position += 1;
 				$tagID = get_query_var( 'tag_id' );

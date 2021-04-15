@@ -4,20 +4,20 @@ function register_post_types(){
 	register_post_type( 'lesson', [
 		'label'  => null,
 		'labels' => [
-			'name'               => 'Уроки', // основное название для типа записи
-			'singular_name'      => 'Урок', // название для одной записи этого типа
-			'add_new'            => 'Добавить урок', // для добавления новой записи
-			'add_new_item'       => 'Добавление урока', // заголовка у вновь создаваемой записи в админ-панели.
-			'edit_item'          => 'Редактирование урока', // для редактирования типа записи
-			'new_item'           => 'Новый урок', // текст новой записи
-			'view_item'          => 'Смотреть урок', // для просмотра записи этого типа.
-			'search_items'       => 'Искать уроки', // для поиска по этим типам записи
-			'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
-			'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+			'name'               => __( 'Lessons', 'universaltheme' ), // основное название для типа записи
+			'singular_name'      => __( 'Lesson', 'universaltheme' ), // название для одной записи этого типа
+			'add_new'            => __( 'Add lesson', 'universaltheme' ), // для добавления новой записи
+			'add_new_item'       => __( 'Adding a lesson', 'universaltheme' ), // заголовка у вновь создаваемой записи в админ-панели.
+			'edit_item'          => __( 'Edit lesson', 'universaltheme' ), // для редактирования типа записи
+			'new_item'           => __( 'New lesson', 'universaltheme' ), // текст новой записи
+			'view_item'          => __( 'View lesson', 'universaltheme' ), // для просмотра записи этого типа.
+			'search_items'       => __( 'Search lessons', 'universaltheme' ), // для поиска по этим типам записи
+			'not_found'          => __( 'Not found', 'universaltheme' ), // если в результате поиска ничего не было найдено
+			'not_found_in_trash' => __( 'Not found in trash', 'universaltheme' ), // если не было найдено в корзине
 			'parent_item_colon'  => '', // для родителей (у древовидных типов)
-			'menu_name'          => 'Уроки', // название меню
+			'menu_name'          => __( 'Lessons', 'universaltheme' ), // название меню
 		],
-		'description'         => 'Раздел с видеоуроками',
+		'description'         => __( 'Section with video lessons', 'universaltheme' ),
 		'public'              => true,
 		// 'publicly_queryable'  => null, // зависит от public
 		// 'exclude_from_search' => null, // зависит от public
@@ -52,17 +52,17 @@ function create_lesson_taxonomies(){
 	register_taxonomy('genre', array('lesson'), array(
 		'hierarchical'  => true,
 		'labels'        => array(
-			'name'              => _x( 'Genres', 'taxonomy general name' ),
-			'singular_name'     => _x( 'Genre', 'taxonomy singular name' ),
-			'search_items'      =>  __( 'Search Genres' ),
-			'all_items'         => __( 'All Genres' ),
-			'parent_item'       => __( 'Parent Genre' ),
-			'parent_item_colon' => __( 'Parent Genre:' ),
-			'edit_item'         => __( 'Edit Genre' ),
-			'update_item'       => __( 'Update Genre' ),
-			'add_new_item'      => __( 'Add New Genre' ),
-			'new_item_name'     => __( 'New Genre Name' ),
-			'menu_name'         => __( 'Genre' ),
+			'name'              => __( 'Genres', 'universaltheme' ),
+			'singular_name'     => __( 'Genre', 'universaltheme' ),
+			'search_items'      =>  __( 'Search Genres', 'universaltheme' ),
+			'all_items'         => __( 'All Genres', 'universaltheme' ),
+			'parent_item'       => __( 'Parent Genre', 'universaltheme' ),
+			'parent_item_colon' => __( 'Parent Genre:', 'universaltheme' ),
+			'edit_item'         => __( 'Edit Genre', 'universaltheme' ),
+			'update_item'       => __( 'Update Genre', 'universaltheme' ),
+			'add_new_item'      => __( 'Add New Genre', 'universaltheme' ),
+			'new_item_name'     => __( 'New Genre Name', 'universaltheme' ),
+			'menu_name'         => __( 'Genres', 'universaltheme' ),
 		),
 		'show_ui'       => true,
 		'query_var'     => true,
@@ -73,21 +73,21 @@ function create_lesson_taxonomies(){
 	register_taxonomy('teacher', 'lesson',array(
 		'hierarchical'  => false,
 		'labels'        => array(
-			'name'                        => _x( 'Teachers', 'taxonomy general name' ),
-			'singular_name'               => _x( 'Teacher', 'taxonomy singular name' ),
-			'search_items'                =>  __( 'Search Teachers' ),
-			'popular_items'               => __( 'Popular Teachers' ),
-			'all_items'                   => __( 'All Teachers' ),
+			'name'                        => __( 'Teachers', 'universaltheme' ),
+			'singular_name'               => __( 'Teacher', 'universaltheme' ),
+			'search_items'                =>  __( 'Search Teachers', 'universaltheme' ),
+			'popular_items'               => __( 'Popular Teachers', 'universaltheme' ),
+			'all_items'                   => __( 'All Teachers', 'universaltheme' ),
 			'parent_item'                 => null,
 			'parent_item_colon'           => null,
-			'edit_item'                   => __( 'Edit Teacher' ),
-			'update_item'                 => __( 'Update Teacher' ),
-			'add_new_item'                => __( 'Add New Teacher' ),
-			'new_item_name'               => __( 'New Teacher Name' ),
-			'separate_items_with_commas'  => __( 'Separate teachers with commas' ),
-			'add_or_remove_items'         => __( 'Add or remove teachers' ),
-			'choose_from_most_used'       => __( 'Choose from the most used teachers' ),
-			'menu_name'                   => __( 'Teachers' ),
+			'edit_item'                   => __( 'Edit Teacher', 'universaltheme' ),
+			'update_item'                 => __( 'Update Teacher', 'universaltheme' ),
+			'add_new_item'                => __( 'Add New Teacher', 'universaltheme' ),
+			'new_item_name'               => __( 'New Teacher Name', 'universaltheme' ),
+			'separate_items_with_commas'  => __( 'Separate teachers with commas', 'universaltheme' ),
+			'add_or_remove_items'         => __( 'Add or remove teachers', 'universaltheme' ),
+			'choose_from_most_used'       => __( 'Choose from the most used teachers', 'universaltheme' ),
+			'menu_name'                   => __( 'Teachers', 'universaltheme' ),
 		),
 		'show_ui'       => true,
 		'query_var'     => true,

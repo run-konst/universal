@@ -7,9 +7,9 @@ class Post_Posts_Widget extends WP_Widget {
 		// вызов конструктора выглядит так:
 		// __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
 		parent::__construct(
-			'post_posts_widget', 
-			'Статьи на странице поста',
-			array( 'description' => 'Статьи на странице поста', 
+			'post_posts_widget',
+			__( 'Articles on the post page', 'universaltheme' ),
+			array( 'description' => __( 'Articles on the post page', 'universaltheme' ), 
 					'classname' => 'post-posts-widget', )
 		);
 
@@ -88,7 +88,7 @@ class Post_Posts_Widget extends WP_Widget {
 		$count = @ $instance['count'] ?: '4';
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Количество статей:' ); ?></label> 
+			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Number of articles:', 'universaltheme' ); ?></label> 
 			<input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" type="text" value="<?php echo esc_attr( $count ); ?>">
 		</p>
 		<?php

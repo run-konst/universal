@@ -28,6 +28,10 @@ if ( ! function_exists( 'universal_theme_setup' ) ) :
 			'header_menu' => 'Меню в шапке',
 			'footer_menu' => 'Меню в подвале'
 		] );
+
+		//Перевод
+
+		load_theme_textdomain( 'universaltheme', get_template_directory() . '/languages' );
 	}
 endif;
 

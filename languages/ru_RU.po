@@ -1,0 +1,332 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: universaltheme\n"
+"POT-Creation-Date: 2021-04-15 17:58+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: My Team\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+
+#: comments.php:54
+#, php-format
+msgid "<cite class=\"comment__author\">%s</cite>"
+msgstr ""
+
+#: comments.php:62
+#, php-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: comments.php:68
+msgid "(Edit)"
+msgstr ""
+
+#: comments.php:73
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comments.php:144
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:165
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: inc/breadcrumbs.php:11
+msgid "Home"
+msgstr "Главная"
+
+#: inc/breadcrumbs.php:59
+msgid "Categories"
+msgstr "Категории"
+
+#: inc/breadcrumbs.php:185
+msgid "Tags"
+msgstr "Теги"
+
+#: inc/downloader-widget.php:11 inc/downloader-widget.php:12
+msgid "Download file"
+msgstr "Скачать файл"
+
+#: inc/downloader-widget.php:39
+msgid "Download"
+msgstr "Скачать"
+
+#: inc/downloader-widget.php:49 inc/downloader-widget.php:55
+msgid "File name"
+msgstr "Название файла"
+
+#: inc/downloader-widget.php:50 inc/downloader-widget.php:59
+msgid "File description"
+msgstr "Описание файла"
+
+#: inc/downloader-widget.php:63
+msgid "File link"
+msgstr "Ссылка на файл"
+
+#: inc/lessons.php:7 inc/lessons.php:18
+msgid "Lessons"
+msgstr "Уроки"
+
+#: inc/lessons.php:8
+msgid "Lesson"
+msgstr "Урок"
+
+#: inc/lessons.php:9
+msgid "Add lesson"
+msgstr "Добавить урок"
+
+#: inc/lessons.php:10
+msgid "Adding a lesson"
+msgstr "Добавление урока"
+
+#: inc/lessons.php:11
+msgid "Edit lesson"
+msgstr "Редактировать урок"
+
+#: inc/lessons.php:12
+msgid "New lesson"
+msgstr "Новый урок"
+
+#: inc/lessons.php:13
+msgid "View lesson"
+msgstr "Смотреть урок"
+
+#: inc/lessons.php:14
+msgid "Search lessons"
+msgstr "Искать уроки"
+
+#: inc/lessons.php:15
+msgid "Not found"
+msgstr "Не найдено"
+
+#: inc/lessons.php:16
+msgid "Not found in trash"
+msgstr "Не найдено в корзине"
+
+#: inc/lessons.php:20
+msgid "Section with video lessons"
+msgstr "Раздел с видеоуроками"
+
+#: inc/lessons.php:55
+msgid "Genres"
+msgstr "Жанры"
+
+#: inc/lessons.php:56 inc/lessons.php:65
+msgid "Genre"
+msgstr "Жанр"
+
+#: inc/lessons.php:57
+msgid "Search Genres"
+msgstr "Искать жанры"
+
+#: inc/lessons.php:58
+msgid "All Genres"
+msgstr "Все жанры"
+
+#: inc/lessons.php:59
+msgid "Parent Genre"
+msgstr "Родительский жанр"
+
+#: inc/lessons.php:60
+msgid "Parent Genre:"
+msgstr "Родительский жанр:"
+
+#: inc/lessons.php:61
+msgid "Edit Genre"
+msgstr "Редактировать жанр"
+
+#: inc/lessons.php:62
+msgid "Update Genre"
+msgstr "Обновить жанр"
+
+#: inc/lessons.php:63
+msgid "Add New Genre"
+msgstr "Добавить новый жанр"
+
+#: inc/lessons.php:64
+msgid "New Genre Name"
+msgstr "Название нового жанра"
+
+#: inc/lessons.php:76 inc/lessons.php:90
+msgid "Teachers"
+msgstr "Преподаватели"
+
+#: inc/lessons.php:77
+msgid "Teacher"
+msgstr "Преподаватель"
+
+#: inc/lessons.php:78
+msgid "Search Teachers"
+msgstr "Искать преподавателя"
+
+#: inc/lessons.php:79
+msgid "Popular Teachers"
+msgstr "Популярные преподаватели"
+
+#: inc/lessons.php:80
+msgid "All Teachers"
+msgstr "Все преподаватели"
+
+#: inc/lessons.php:83
+msgid "Edit Teacher"
+msgstr "Редактировать преподавателя"
+
+#: inc/lessons.php:84
+msgid "Update Teacher"
+msgstr "Обновить преподавателя"
+
+#: inc/lessons.php:85
+msgid "Add New Teacher"
+msgstr "Добавить нового преподавателя"
+
+#: inc/lessons.php:86
+msgid "New Teacher Name"
+msgstr "Имя нового преподавателя"
+
+#: inc/lessons.php:87
+msgid "Separate teachers with commas"
+msgstr "Разделите преподавателей запятыми"
+
+#: inc/lessons.php:88
+msgid "Add or remove teachers"
+msgstr "Добавить или удалить преподавателей"
+
+#: inc/lessons.php:89
+msgid "Choose from the most used teachers"
+msgstr "Выбрать из наиболее популярных преподавателей"
+
+#: inc/post_posts-widget.php:11 inc/post_posts-widget.php:12
+msgid "Articles on the post page"
+msgstr "Статьи на странице поста"
+
+#: inc/post_posts-widget.php:91
+msgid "Number of articles:"
+msgstr "Количество статей:"
+
+#: inc/recent_posts-widget.php:11 inc/recent_posts-widget.php:12
+#: inc/recent_posts-widget.php:82 inc/sidebars.php:17
+msgid "Recent posts"
+msgstr "Недавние статьи"
+
+#: inc/recent_posts-widget.php:56
+msgid "ago"
+msgstr "назад"
+
+#: inc/recent_posts-widget.php:87
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: inc/recent_posts-widget.php:91
+msgid "Number of posts:"
+msgstr "Количество постов:"
+
+#: inc/sidebars.php:8
+msgid "Main sidebar"
+msgstr "Сайдбар на главной"
+
+#: inc/sidebars.php:10 inc/sidebars.php:19 inc/sidebars.php:55
+msgid "Add widgets here."
+msgstr "Добавьте виджеты сюда."
+
+#: inc/sidebars.php:26
+msgid "Footer menu sidebar"
+msgstr "Сайдбар с меню в подвале"
+
+#: inc/sidebars.php:28
+msgid "Add menus here."
+msgstr "Добавьте меню сюда."
+
+#: inc/sidebars.php:37
+msgid "Footer text"
+msgstr "Текст в подвале"
+
+#: inc/sidebars.php:39
+msgid "Add text here."
+msgstr "Добавьте текст сюда."
+
+#: inc/sidebars.php:46
+msgid "Sidebar on the post page"
+msgstr "Сайдбар на странице поста"
+
+#: inc/sidebars.php:48
+msgid "Add articles here"
+msgstr "Добавьте статьи сюда"
+
+#: inc/sidebars.php:53
+msgid "Sidebar on the search page"
+msgstr "Сайдбар на странице поиска"
+
+#: inc/social-widget.php:11 inc/social-widget.php:12
+msgid "Social networks"
+msgstr "Социальные сети"
+
+#: inc/social-widget.php:36
+msgid "Our social networks"
+msgstr "Наши соцсети"
+
+#: inc/social-widget.php:57
+msgid "Facebook link:"
+msgstr "Ссылка на Facebook:"
+
+#: inc/social-widget.php:61
+msgid "Instagram link:"
+msgstr "Ссылка на Instagram:"
+
+#: inc/social-widget.php:65
+msgid "Youtube link:"
+msgstr "Ссылка на Youtube:"
+
+#: inc/social-widget.php:69
+msgid "Twitter link:"
+msgstr "Ссылка на Twitter:"
+
+#: search.php:5
+msgid "Search results"
+msgstr "Результаты поиска по запросу"
+
+#: search.php:63
+msgctxt "search"
+msgid "No results"
+msgstr "Ничего не найдено"
+
+#: searchform.php:2
+msgctxt "search"
+msgid "Search"
+msgstr "Поиск"
+
+#: template-parts/content-lesson.php:25 template-parts/content-post.php:32
+msgid "Назад"
+msgstr ""
+
+#: template-parts/content-lesson.php:26 template-parts/content-post.php:33
+msgid "Вперед"
+msgstr ""
+
+#: template-parts/content-post.php:92
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content-post.php:105
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-post.php:119
+#, php-format
+msgid "%1$s"
+msgstr ""
